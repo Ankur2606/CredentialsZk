@@ -1,36 +1,54 @@
 import { motion } from "framer-motion";
-import { Shield, Fingerprint, Blocks, Zap } from "lucide-react";
+import { Shield, Fingerprint, Blocks, Zap, Users, Brain } from "lucide-react";
 
 const features = [
   {
-    icon: Shield,
-    title: "Zero-Knowledge Proofs",
-    description: "Verify credentials without revealing underlying data",
+    icon: Fingerprint,
+    title: "Decentralized Identity (DID) Layer",
+    description: "Verifiable credentials linked to your crypto wallet with W3C DID standards",
+    tech: "Polygon ID, thirdweb SDK, Alchemy RPC",
     color: "primary",
   },
   {
-    icon: Fingerprint,
-    title: "Privacy First",
-    description: "Your identity, your control. Complete data sovereignty",
+    icon: Shield,
+    title: "Zero-Knowledge Proofs (ZKP)",
+    description: "Generate proofs like 'has a verified degree' or 'is over 18' without exposing sensitive data",
+    tech: "Circom, Polygon ID zk-SNARKs, Groth16 verifier",
     color: "secondary",
   },
   {
     icon: Blocks,
-    title: "Blockchain Verified",
-    description: "Immutable and transparent credential verification",
+    title: "Smart Contract Infrastructure",
+    description: "Credential issuance, revocation, and verification executed on-chain with transparent audit trails",
+    tech: "Solidity, Hardhat, thirdweb Deployer",
     color: "accent",
+  },
+  {
+    icon: Brain,
+    title: "AI/NLP Skill Tagging",
+    description: "Extract and classify skills from credentials for smarter, semantic searches",
+    tech: "ContextGNN (PyTorch Geometric), FAISS, Hugging Face",
+    color: "primary",
+  },
+  {
+    icon: Users,
+    title: "Web3 Interface",
+    description: "Connect MetaMask → Issue or verify instantly → View credential proofs",
+    tech: "React, Next.js 14, TailwindCSS, thirdweb Connect",
+    color: "secondary",
   },
   {
     icon: Zap,
     title: "Instant Verification",
-    description: "Real-time credential validation on-chain",
-    color: "primary",
+    description: "Verify in <3 seconds instead of 3-5 days with 95% cost reduction for enterprises",
+    tech: "Real-time on-chain validation",
+    color: "accent",
   },
 ];
 
 export const FeatureCards = () => {
   return (
-    <section className="py-24 px-6 relative">
+    <section id="features" className="py-24 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -40,14 +58,14 @@ export const FeatureCards = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Protocol Features
+            Key Features
           </h2>
           <p className="text-muted-foreground text-lg">
-            Built for the decentralized future of identity verification
+            A multi-layer privacy stack for trustless credential verification
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -70,9 +88,14 @@ export const FeatureCards = () => {
                 <h3 className="text-xl font-semibold mb-2 text-foreground">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm mb-3">
                   {feature.description}
                 </p>
+                <div className="mt-auto">
+                  <p className="text-xs text-muted-foreground/60 font-mono">
+                    Tech: {feature.tech}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}

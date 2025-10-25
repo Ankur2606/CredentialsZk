@@ -45,44 +45,42 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent"
         >
-          CredentialZK
+          Verify Anything. Reveal Nothing.
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto"
+          className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
         >
-          Zero-Knowledge Credential Verification Protocol
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="text-base md:text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto"
-        >
-          Secure, private, and verifiable credentials powered by blockchain technology.
-          Connect your wallet to access the decentralized credential ecosystem.
+          A privacy‑preserving credential verification platform built on blockchain and Zero‑Knowledge Proofs (ZKPs).
+          <br />
+          <span className="text-lg mt-2 block">
+            Prove your age, education, or qualifications — without sharing personal data.
+          </span>
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="flex flex-col items-center gap-6"
         >
-          <div className="relative">
-            <div className="absolute -inset-8 bg-gradient-to-r from-primary/30 via-secondary/30 to-accent/30 rounded-full blur-3xl opacity-50 animate-pulse-glow" />
-            <div className="relative">
-              {/* WalletConnect component will be placed here */}
-            </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="relative group px-8 py-4 rounded-xl font-semibold overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary" />
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <span className="relative text-background">Try Live Demo</span>
+            </button>
+            <button className="px-8 py-4 rounded-xl font-semibold border-2 border-primary/30 hover:border-primary bg-card/50 backdrop-blur-xl transition-all duration-300">
+              View Technical Architecture
+            </button>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mt-4">
             <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full px-4 py-2">
               <div className="w-2 h-2 bg-primary rounded-full animate-glow" />
               <span>Secure</span>

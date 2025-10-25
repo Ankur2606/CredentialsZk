@@ -2,6 +2,12 @@ import { ThirdwebProvider } from "thirdweb/react";
 import { HeroSection } from "@/components/HeroSection";
 import { WalletConnect } from "@/components/WalletConnect";
 import { FeatureCards } from "@/components/FeatureCards";
+import { ProblemSection } from "@/components/ProblemSection";
+import { SolutionSection } from "@/components/SolutionSection";
+import { ArchitectureSection } from "@/components/ArchitectureSection";
+import { TechStackSection } from "@/components/TechStackSection";
+import { RevenueSection } from "@/components/RevenueSection";
+import { ImpactSection } from "@/components/ImpactSection";
 
 const Index = () => {
   return (
@@ -16,16 +22,24 @@ const Index = () => {
                 CredentialZK
               </span>
             </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Features
-              </a>
-              <a href="#protocol" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Protocol
-              </a>
-              <a href="#docs" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                Docs
-              </a>
+            <div className="flex items-center gap-6">
+              <div className="hidden md:flex items-center gap-6">
+                <a href="#problem" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Problem
+                </a>
+                <a href="#solution" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Solution
+                </a>
+                <a href="#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Features
+                </a>
+                <a href="#architecture" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Architecture
+                </a>
+              </div>
+              <div className="scale-90 md:scale-100">
+                <WalletConnect />
+              </div>
             </div>
           </div>
         </header>
@@ -33,15 +47,13 @@ const Index = () => {
         {/* Main Content */}
         <main className="pt-20">
           <HeroSection />
-          
-          {/* Wallet Connect Section */}
-          <section className="py-12 px-6">
-            <div className="max-w-2xl mx-auto">
-              <WalletConnect />
-            </div>
-          </section>
-
+          <ProblemSection />
+          <SolutionSection />
           <FeatureCards />
+          <ArchitectureSection />
+          <TechStackSection />
+          <RevenueSection />
+          <ImpactSection />
 
           {/* CTA Section */}
           <section className="py-24 px-6 relative overflow-hidden">
