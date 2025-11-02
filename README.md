@@ -6,13 +6,14 @@
 
 ## Overview
 
-**The Trustless Credential Hub** is a decentralized platform for verifying credentials—such as age, degrees, or professional qualifications—without exposing any sensitive data. By leveraging blockchain for immutability and Zero-Knowledge Proofs (ZKPs) for privacy, users can instantly prove eligibility (e.g., “is over 18”, “has a Bachelor’s degree”) while keeping all personal details hidden. Issuers (like universities) provide credentials, holders store them in their wallet, and verifiers check proofs in seconds—no manual document checks, no risk of data leakage. The platform also features AI-powered skill tagging and a Web3-first UX.
+**The Trustless Credential Hub** is a decentralized platform for verifying credentials—such as age, degrees, or professional qualifications without exposing any sensitive data. By leveraging blockchain for immutability and Zero-Knowledge Proofs (ZKPs) for privacy, users can instantly prove eligibility (e.g., “is over 18”, “has a Bachelor’s degree”) while keeping all personal details hidden. Issuers (like universities) provide credentials, holders store them in their wallet, and verifiers check proofs in seconds—no manual document checks, no risk of data leakage. The platform also features AI-powered skill tagging and a Web3-first UX.
 
 ---
 
 ## Demo
 
-**Try it live:** [Add your deployment/demo link here]  
+**Try it live:**
+credentials-zk-protocol.vercel.app
 **Connect MetaMask, issue, and verify credentials in seconds.**
 
 ---
